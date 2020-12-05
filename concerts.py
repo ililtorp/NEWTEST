@@ -22,31 +22,31 @@ def pop(selected_date): #Define pop site
 
 
 @app.route("/jazz")
-def Jazz(): #Define jazz site#
+def Jazz(): #Define jazz site
     title = "Jazz concerts"
     db = sqlite3.connect("concerts.db", isolation_level=None) #Connect database to HTML
     db_cursor = db.cursor() #Connect database to HTML
     rows = db_cursor.execute("SELECT * FROM concerts where genre='Jazz'") #Execute the concerts database
-    return render_template("P7.html", rows=rows, title=title) #Return #
+    return render_template("P7.html", rows=rows, title=title) #Return
 
 @app.route("/classic")
-def Klassisk(): #Define classic site#
+def Klassisk(): #Define classic site
     title = "Classic concerts"
     db = sqlite3.connect("concerts.db", isolation_level=None) #Connect database to HTML
     db_cursor = db.cursor() #Connect database to HTML
     rows = db_cursor.execute("SELECT * FROM concerts where genre='Klassisk'") #Execute the concerts database
-    return render_template("P7.html", rows=rows, title=title) #Return #
+    return render_template("P7.html", rows=rows, title=title) #Return
 
 @app.route("/rock")
-def Rock(): #Define rock site#
+def Rock(): #Define rock site
     title = "Rock concerts"
     db = sqlite3.connect("concerts.db", isolation_level=None) #Connect database to HTML
     db_cursor = db.cursor() #Connect database to HTML
     rows = db_cursor.execute("SELECT * FROM concerts where genre='Rock'") #Execute the concerts database
-    return render_template("P7.html", rows=rows, title=title) #Return #
+    return render_template("P7.html", rows=rows, title=title) #Return
 
 @app.route("/hiphop")
-def Hiphop(): #Define hiphop site#
+def Hiphop(): #Define hiphop site
     title = "Hiphop concerts"
     db = sqlite3.connect("concerts.db", isolation_level=None) #Connect database to HTML
     db_cursor = db.cursor() #Connect database to HTML
